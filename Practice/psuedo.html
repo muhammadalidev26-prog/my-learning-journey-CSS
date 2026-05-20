@@ -24,12 +24,51 @@
                 <label for="password"></label>
                 <input type="password" id="password" placeholder="enter your password" required>
             </div>
+
             <div>
+                <input type="checkbox" name="Remember Me" id="remember-me" value="Remembered">
+                <label for="remember-me">Remember me</label>
+            </div>
+
+            <div>
+                <label for="18+">
+                    <input id="18+" type="radio" name="Age Verification" value="18">
+                    I am 18 or older
+                </label>
+
+                <label for="17">
+                    <input id="17" type="radio" name="Age Verification" value="17" checked>
+                    <span>I am under 18</span>
+                </label>
+
+            </div>
+
+            <div>
+                <button type="submit" disabled>Submit</button>
                 <button type="submit">Submit</button>
             </div>
         </form>
     </div>
 
+    <div class="lists">
+        <h3>:first-child & :last-child example</h3>
+        <ul>
+            <li>Name</li>
+            <li>Jake</li>
+            <li>Age</li>
+            <li>16</li>
+            <li>Sigma</li>
+        </ul>
+    </div>
+
+    <div class="has_not">
+        <div class="check">
+            <img src="" alt="">
+        </div>
+        <div class="check">
+
+        </div>
+    </div>
 </body>
 
 </html>
