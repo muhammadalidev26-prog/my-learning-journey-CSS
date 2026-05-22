@@ -1,0 +1,29 @@
+a {
+    outline: 0px solid transparent;
+    font: 1.2rem/1.6 Arial, Helvetica, sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a:link {
+    color: brown;
+}
+
+a:visited {
+    color: violet;
+}
+
+a:focus {
+    color: purple;
+    outline: 1px solid black;
+    outline-offset: 3px;
+}
+
+a:hover {
+        color: red;
+        transform: scale(1.9);
+    }
+
+a:active {
+    color: green;
+    }
+    
