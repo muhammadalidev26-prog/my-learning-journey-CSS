@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing Pseudo classes & Pseudo attributes</title>
+    <link rel="stylesheet" href="css/psuedo.css">
+</head>
+
+<body>
+    <div class="form">
+        <div class="form-heading">Fill up the form</div>
+        <form action="" method="get">
+            <div>
+                <label for="name"></label>
+                <input type="text" id="name" placeholder="enter your name">
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="enter your email">
+            </div>
+            <div>
+                <label for="password"></label>
+                <input type="password" id="password" placeholder="enter your password" required>
+            </div>
+
+            <div>
+                <input type="checkbox" name="Remember Me" id="remember-me" value="Remembered">
+                <label for="remember-me">Remember me</label>
+            </div>
+
+            <div>
+                <label for="18+">
+                    <input id="18+" type="radio" name="Age Verification" value="18">
+                    I am 18 or older
+                </label>
+
+                <label for="17">
+                    <input id="17" type="radio" name="Age Verification" value="17" checked>
+                    <span>I am under 18</span>
+                </label>
+
+            </div>
+
+            <div>
+                <button type="submit" disabled>Submit</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="lists">
+        <h3>:first-child & :last-child example</h3>
+        <ul>
+            <li>Name</li>
+            <li>Jake</li>
+            <li>Age</li>
+            <li>16</li>
+            <li>Sigma</li>
+        </ul>
+    </div>
+
+    <div class="has_not">
+        <div class="check">
+            <img src="" alt="">
+        </div>
+        <div class="check">
+
+        </div>
+    </div>
+</body>
+
+</html>
