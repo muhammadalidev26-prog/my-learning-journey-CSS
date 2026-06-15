@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "lora";
+    src: url(fonts/Lora/static/Lora-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "lora bold";
+    src: url(fonts/Lora/static/Lora-Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+/* General setup */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 20px;
+    min-width: 980px;
+    max-width: 1400px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Layout */
+
+main {
+    display: grid;
+    grid-template-columns: 5fr 2fr 2fr;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* header and footer */
+
+header {
+    border-bottom: 5px solid #aa6666;
+}
+
+footer {
+    border-top: 5px solid #aa6666;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Headings Styles */
+h1,
+h2 {
+    font-family: "lora", serif;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+/* Body text Styles */
+p,
+li {
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+section h2 + p {
+    text-indent: 2rem;
+}
+
+/* Links Styles */
+
+a {
+    outline: none;
+}
+a:link,
+a:visited {
+    text-underline-offset: 3px;
+    font-weight: bold;
+    color: #aa6666;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #773333;
+}
+
+a[href^="https://"]::after {
+    content: "";
+    display: inline-block;
+    height: 0.8em;
+    width: 0.8em;
+    margin-left: 0.25em;
+
+    background-image: url(images/external-link-52.png);
+    background-size: contain;
+}
+
+/* Styling Lists */
+
+ol,
+ul {
+    margin: 1rem 0;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: lower-roman;
+}
+
+/* Navigation Menu Styles */
+
+nav ul {
+    padding-left: 0;
+}
+
+nav li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+nav li a {
+    font-family: "lora bold", serif;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    line-height: 3.5;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #aa6666;
+}
+
+nav li a:focus,
+nav li a:hover {
+    color: white;
+    background: #aa6666;
+}
+
+nav li a:active {
+    color: white;
+    background: black;
+}
