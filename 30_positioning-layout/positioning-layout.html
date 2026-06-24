@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Playground</title>
+    <link rel="stylesheet" href="css/positioning-layout.css">
+</head>
+
+<body>
+
+    <section class="sticky-stack">
+        <div class="card card-1">
+            <h2>1. Sticky Stack Effect</h2>
+            <p>Scroll down to see the next card slide right over this one.</p>
+        </div>
+        <div class="card card-2">
+            <h2>Keep Scrolling...</h2>
+            <p>This is card 2 locking into place.</p>
+        </div>
+        <div class="card card-3">
+            <h2>Card 3</h2>
+            <p>And here is the final card in the stack.</p>
+        </div>
+    </section>
+
+    <section class="clip-demo-container">
+        <div class="sticky-header">
+            <h2>2. Sticky Header (Protected by overflow: clip)</h2>
+        </div>
+        <div class="wide-content">
+            This box is super wide to create horizontal overflow, but because we used <code>overflow: clip</code>
+            instead of <code>hidden</code>, the header above stays perfectly sticky!
+        </div>
+    </section>
+
+    <section class="flex-section">
+        <h2>3. Absolute Positioning Inside Flexbox</h2>
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item badge-parent">
+                Item 2
+                <span class="absolute-badge">New</span>
+            </div>
+            <div class="flex-item">Item 3</div>
+        </div>
+    </section>
+
+    <div class="parallax-wrapper">
+        <div class="parallax-group">
+            <div class="parallax-layer layer-back">
+                BACKGROUND (Moves Slower)
+            </div>
+            <div class="parallax-layer layer-base">
+                <h2>4. Pure CSS 3D Parallax</h2>
+                <p>Scroll inside this box. The text moves faster than the background behind it!</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="stacking-section">
+        <h2>5. Stacking Context Trick</h2>
+        <p>Even though the red box has a massive <code>z-index: 9999</code>, it cannot go over the yellow box because
+            its parent container has an <code>opacity</code> value less than 1, trapping it in a lower stacking context.
+        </p>
+
+        <div class="parent-low-context">
+            Parent (Opacity: 0.99)
+            <div class="child-high-z">Red Box (z-index: 9999)</div>
+        </div>
+
+        <div class="separate-box">
+            Yellow Box (z-index: 2)
+        </div>
+    </section>
+
+</body>
+
+</html>
