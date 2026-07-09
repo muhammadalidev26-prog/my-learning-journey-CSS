@@ -1,0 +1,27 @@
+body {
+    width: 800px;
+    height: 1400px;
+    margin: 0 auto;
+}
+
+h1 {
+    font:
+        1.7rem/1.5 "Gill Sans",
+        Helvetica,
+        sans-serif;
+    position: fixed;
+    top: 0;
+    width: 800px;
+    margin-top: 0;
+    background: skyblue;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+/* 
+.first-child {
+    margin-top: 100px;
+} */
+
+p:nth-of-type(1) {
+    margin-top: 100px;
+}
