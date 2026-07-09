@@ -1,0 +1,22 @@
+
+body {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+dt {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 1em 0;
+}
+
+.container {
+    height: 280px;
+    overflow: scroll;
+    border: 2px solid black;
+}
