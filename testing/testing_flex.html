@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 1. Basic reset to clear default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Header Container (Block-level by default) */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    
+    /* This makes the Title and the Nav Menu sit next to each other */
+    display: flex;
+    justify-content: space-between; /* Pushes title to left, nav to right */
+    align-items: center; /* Vertically centers the text */
+}
+
+/* 3. The Navigation Menu */
+nav ul {
+    /* Removes the default bullet points */
+    list-style-type: none; 
+    
+    /* CRITICAL: display: flex turns the vertical list into a horizontal row */
+    display: flex; 
+    
+    /* Adds space between the individual navigation items */
+    gap: 20px; 
+}
+
+/* 4. Individual Links/Items */
+nav li {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Visual feedback when you hover over the items */
+nav li:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La Roja</h1>
+        <nav>
+            <ul>
+                <li>Name</li>
+                <li>Jake</li>
+                <li>Cake</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
