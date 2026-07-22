@@ -1,0 +1,82 @@
+
+
+
+/* Styling for when the page is being printed */
+@media print {
+  body {
+    background-color: transparent;
+    color: black;
+    padding: 20px;
+  }
+
+  body * {
+    color: black;
+  }
+}
+
+/* Styling for Normal Page */
+body {
+  color: green;
+  background-color: lightyellow;
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Media with Conditions */
+@media (min-width:40em){ /* aka media*/ 
+  /* Styling for devices with width >=40em */
+}
+
+@media (width >= 40em) {
+  /* Avoiding confusion with min */
+}
+
+@media (30 <= width >=50em) {
+  /* Styling for devices with width between two values */
+}
+
+/* orientation */
+@media all and (orientation: landscape) {
+   /* Styles for landscape mode. */
+  h1::after {
+    content: "Landscape";
+  }
+}
+
+@media (orientation: portrait) and (width>400px) {
+  h1::after {
+    content: "Potrait Width is greater than 400px;";
+  }
+
+}
+
+/* You can combine different queries using and, ',' or not */
+
+@media not (width>400px) {
+  h1::after {
+    content:"potrait, width is smaller than 400px;"
+  }
+  body {
+    background-color: rgb(59, 58, 58);
+    color:whitesmoke;
+  }
+}
+
+@media (min-width: 50em ) and (min-height: 30em) {
+  p {
+    column-count: 2;
+  }
+}
+
+@media not ((width >= 30em) or (orientation: landscape)) {
+  /* These styles won't be shown if the viewport is wider than 30em, or if the orientation is landscape. */
+  .navlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    font-weight: bolder;
+    font-size: 1.125rem;
+  }
+}
