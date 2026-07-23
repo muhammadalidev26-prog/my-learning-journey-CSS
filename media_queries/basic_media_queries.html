@@ -1,34 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Web Design | Viewport & Media queries</title> <!-- It tells the browser that the website is made for the width of 
-  the device and that the scale is 1.0 (no scaling applied by browser) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Blog Website</title>
 
-  <link rel="stylesheet" href="css/basic_media_queries.css">
+    <link rel="stylesheet" href="css/basic_media_queries.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
 
-  <nav>
-    <ul class="navlist">
-      <li>home</li>
-      <li>about</li>
-      <li>contact</li>
-    </ul>
-  </nav>
-  
-  <!-- <h1>Landscape</h1> -->
-  <h1></h1>
+    <!-- Website Header -->
+    <header>
+        <h1>Welcome to My Blog</h1>
+        <p>Thoughts, stories, and ideas shared daily.</p>
+        <nav>
+            <ul>
+                <li> <i class="fa-solid fa-house"></i><a href="#">Home</a></li>
+                <li><i class="fa-solid fa-info"></i><a href="#">About</a></li>
+                <li><i class="fa-regular fa-envelope"></i><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum omnis sapiente magni ratione perspiciatis neque reiciendis nam doloremque sit totam atque voluptate est vel inventore, ad facilis dicta dignissimos numquam.
-  Ab facere fugiat laborum. Molestias alias tempore, corporis, illum deleniti itaque laudantium inventore nulla maiores in expedita dolore. Architecto officia est eveniet vero laudantium, modi veritatis dolorum molestias iure voluptatem.
-  Saepe labore quo, repellat nesciunt aspernatur minima maxime, sunt illum iste vitae ipsa vero quidem hic commodi tenetur sapiente quas ipsam explicabo consequuntur incidunt! Eligendi quibusdam porro voluptatem vero? Quibusdam?
-  Amet deleniti nihil autem voluptas consectetur ad, perferendis labore doloribus expedita vitae harum fugiat sed pariatur quisquam laborum debitis suscipit, repellat odio maxime ipsa culpa vero dolore, neque nobis? Reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio veritatis nulla fugiat itaque hic, aspernatur molestiae vero perspiciatis cumque quasi. Delectus itaque possimus, eius doloremque illo culpa voluptate quam soluta.
-  Id atque itaque, architecto eos ullam optio odio maiores numquam iste quas soluta adipisci deserunt aperiam voluptas eligendi excepturi at nulla maxime voluptatibus illo placeat tempora quae nihil temporibus. Debitis.
-  Porro laboriosam eligendi iusto placeat! Pariatur dignissimos voluptatibus omnis architecto molestias id? Cumque doloribus animi impedit corrupti veniam, maiores deserunt ipsa repudiandae unde accusamus a nostrum, accusantium, id adipisci aperiam!</p>
+    <hr>
 
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- Blog Posts Section -->
+        <section>
+            <h2>Latest Articles</h2>
+
+            <!-- Blog Post 1 -->
+            <article>
+                <h3><a href="#">Understanding Semantic HTML</a></h3>
+                <p><small>Published on July 23, 2026 by Author Name</small></p>
+                <p>Semantic HTML elements clearly describe their meaning to both the browser and the developer. Elements like headers, footers, and articles make your code easier to read and improve search engine optimization (SEO). 
+                </p>
+                
+                <a href="#">Read More &rarr;</a>
+            </article>
+
+            <br>
+
+            <!-- Blog Post 2 -->
+            <article>
+                <h3><a href="#">Why Learn Web Development?</a></h3>
+                <p><small>Published on July 20, 2026 by Author Name</small></p>
+                <p>Web development is a highly rewarding skill. It allows you to build custom sites from scratch, solve complex coding puzzles, and bring your unique digital project ideas directly to life.</p>
+                <a href="#">Read More &rarr;</a>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Sidebar / Supplemental Links -->
+        <aside>
+            <h2>About Me</h2>
+            <p>Hi! I am a passionate blogger sharing my tech journey.</p>
+            
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Personal Stories</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <hr>
+
+    <!-- Website Footer -->
+    <footer>
+        <p>&copy; 2026 My Blog Website. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
