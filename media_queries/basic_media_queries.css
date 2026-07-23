@@ -1,82 +1,70 @@
+@font-face {
+  font-family: "Google Sans";
+  src: url("../fonts/Google_Sans_Flex/static/GoogleSansFlex_120pt-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* If you don't specify media type, it would default to all */
+body {
+  background-color: beige;
+  color: green;
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.3rem);
+  font-family: "Google Sans", sans-serif;
+  margin: clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+header li {
+  background-color: green;
+  color: beige;
+  padding: 8px 15px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  cursor: pointer;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header li i {
+  margin-right: 5px;
+}
 
 
-
-/* Styling for when the page is being printed */
+/* Changing some styles for when the page is being printed */
 @media print {
   body {
     background-color: transparent;
     color: black;
-    padding: 20px;
-  }
-
-  body * {
-    color: black;
+    margin: 20px;
+    font-size: clamp(1.1rem, 0.9182rem + 0.9091vw, 1.6rem);
   }
 }
 
-/* Styling for Normal Page */
-body {
-  color: green;
-  background-color: lightyellow;
-  p {
-    font-size: 1.25rem;
-  }
-}
-
-/* Media with Conditions */
-@media (min-width:40em){ /* aka media*/ 
-  /* Styling for devices with width >=40em */
-}
-
-@media (width >= 40em) {
-  /* Avoiding confusion with min */
-}
-
-@media (30 <= width >=50em) {
-  /* Styling for devices with width between two values */
-}
-
-/* orientation */
-@media all and (orientation: landscape) {
-   /* Styles for landscape mode. */
-  h1::after {
-    content: "Landscape";
-  }
-}
-
-@media (orientation: portrait) and (width>400px) {
-  h1::after {
-    content: "Potrait Width is greater than 400px;";
-  }
-
-}
-
-/* You can combine different queries using and, ',' or not */
-
-@media not (width>400px) {
-  h1::after {
-    content:"potrait, width is smaller than 400px;"
-  }
-  body {
-    background-color: rgb(59, 58, 58);
-    color:whitesmoke;
-  }
-}
-
-@media (min-width: 50em ) and (min-height: 30em) {
-  p {
-    column-count: 2;
-  }
-}
-
-@media not ((width >= 30em) or (orientation: landscape)) {
-  /* These styles won't be shown if the viewport is wider than 30em, or if the orientation is landscape. */
-  .navlist {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+/* Media Queries, it only applies if the condition is satisfied */
+/* You can also use media queries to adjust styles based on viewport size (height/width) */
+/* You can also combine multiple conditions using 'and' ', stands for or' and 'not' */
+@media (orientation: portrait) and (max-width: 600px){
+  header nav ul li {
     list-style: none;
-    font-weight: bolder;
-    font-size: 1.125rem;
+    a {
+      display: none;
+    }
+    i {
+      margin: 0;
+    }
   }
 }
+
+
+
