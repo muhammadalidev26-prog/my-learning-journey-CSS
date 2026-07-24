@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Google Sans";
+  src: url("../fonts/Google_Sans_Flex/static/GoogleSansFlex_120pt-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("../fonts/Google_Sans_Flex/static/GoogleSansFlex_9pt-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(248, 248, 232);
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.3rem);
+  font-family: "Google Sans", sans-serif;
+}
+
+h1,
+h2 {
+  font-size: clamp(1.3rem, 0.8rem + 1vw, 2rem);
+}
+
+.profile-card {
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 0.3);
+  background-color: #f8f9fa;
+  color: #333333;
+  max-inline-size: 400px;
+  border: 2px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+
+  container: sidebar-card / inline-size;
+}
+
+.profile-avatar img {
+  max-inline-size: 100px;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.profile-content > * {
+  margin: 0;
+}
+
+.profile-content button {
+  background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
+
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  outline: none;
+  border: none;
+  font-weight: 600;
+}
+
+.profile-content button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
