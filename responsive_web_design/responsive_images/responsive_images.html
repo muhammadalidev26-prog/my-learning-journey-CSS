@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Images in CSS | Learning Responsive Web Design</title>
+
+  <link rel="stylesheet" href="css/responsive_images.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- You should define the height/width in html to tell the browser how big the image would be so it renders text below the image even when the image hasn't loaded yet, it won't affect the final height/width of the image -->
+    <img src="images/coding2.jpg" alt="coding image" class="first-image" width="5000" height="3000">
+    <img src="images/coding1.jpg" alt="another coding image" class="second-image" width="6000" heigh="4500">
+
+    <h2>Lazy image below the paragraph</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem voluptatem doloremque consectetur veritatis, eligendi omnis sint inventore impedit quod deleniti voluptas quos est, similique tenetur libero necessitatibus iste placeat possimus?
+    Quas similique excepturi porro ex possimus, ullam veritatis, ut ea autem amet perferendis assumenda in incidunt exercitationem? Aliquam quo maiores, quae maxime sit fugit quos ipsum fuga quis, saepe non!
+    Alias enim veniam voluptatibus, fugit quisquam et tempore in molestias, non magnam asperiores, earum eligendi rerum reprehenderit. Nobis ea ipsam qui eos ducimus, atque, eum officia impedit cum aliquam minus!
+    In, commodi, inventore voluptatibus quisquam autem, nemo consectetur doloribus est praesentium iste tempora error excepturi. Distinctio iure ad aperiam officiis a saepe, magni et architecto ex quos possimus, quidem id?
+    Necessitatibus, nisi. Sed nobis dignissimos recusandae autem pariatur suscipit maxime nam, facilis voluptatum qui tenetur possimus unde assumenda ullam voluptas minima ab debitis quaerat mollitia, inventore sequi minus, sint magni.
+    Dolore neque atque delectus optio voluptatibus quas debitis ut cupiditate incidunt, accusantium modi beatae error iste! Optio, nemo. Temporibus earum labore itaque sunt culpa sapiente suscipit magni laborum obcaecati laboriosam?
+    Nisi saepe eos consequatur repellat necessitatibus recusandae at perferendis minus vel, a fuga? Nostrum et dolorum nesciunt atque odio soluta porro molestiae recusandae illum sequi blanditiis, in facilis provident autem?
+    Dolor porro, vel sint, quae alias doloremque, quod quis fuga id sequi laudantium voluptas optio a. Minus doloremque quidem veritatis magni harum? Id quod corrupti nemo animi sed nisi fugit.
+    Magni facilis, veniam nihil esse, placeat consectetur doloribus quisquam obcaecati asperiores repellat dolorem iusto omnis voluptatem expedita? Veniam quam quis eligendi suscipit, a possimus ratione nisi, quidem dolores, explicabo aperiam.
+    Cumque aperiam voluptas a. Rem distinctio accusamus cupiditate? Magnam alias atque est enim sint ea iure omnis, facilis perspiciatis accusamus delectus cumque tempora laboriosam, temporibus optio architecto veritatis similique aut!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem voluptatem doloremque consectetur veritatis, eligendi omnis sint inventore impedit quod deleniti voluptas quos est, similique tenetur libero necessitatibus iste placeat possimus?
+    Quas similique excepturi porro ex possimus, ullam veritatis, ut ea autem amet perferendis assumenda in incidunt exercitationem? Aliquam quo maiores, quae maxime sit fugit quos ipsum fuga quis, saepe non!
+    Alias enim veniam voluptatibus, fugit quisquam et tempore in molestias, non magnam asperiores, earum eligendi rerum reprehenderit. Nobis ea ipsam qui eos ducimus, atque, eum officia impedit cum aliquam minus!
+    In, commodi, inventore voluptatibus quisquam autem, nemo consectetur doloribus est praesentium iste tempora error excepturi. Distinctio iure ad aperiam officiis a saepe, magni et architecto ex quos possimus, quidem id?
+    Necessitatibus, nisi. Sed nobis dignissimos recusandae autem pariatur suscipit maxime nam, facilis voluptatum qui tenetur possimus unde assumenda ullam voluptas minima ab debitis quaerat mollitia, inventore sequi minus, sint magni.
+    Dolore neque atque delectus optio voluptatibus quas debitis ut cupiditate incidunt, accusantium modi beatae error iste! Optio, nemo. Temporibus earum labore itaque sunt culpa sapiente suscipit magni laborum obcaecati laboriosam?
+    Nisi saepe eos consequatur repellat necessitatibus recusandae at perferendis minus vel, a fuga? Nostrum et dolorum nesciunt atque odio soluta porro molestiae recusandae illum sequi blanditiis, in facilis provident autem?
+    Dolor porro, vel sint, quae alias doloremque, quod quis fuga id sequi laudantium voluptas optio a. Minus doloremque quidem veritatis magni harum? Id quod corrupti nemo animi sed nisi fugit.
+    Magni facilis, veniam nihil esse, placeat consectetur doloribus quisquam obcaecati asperiores repellat dolorem iusto omnis voluptatem expedita? Veniam quam quis eligendi suscipit, a possimus ratione nisi, quidem dolores, explicabo aperiam.
+    Cumque aperiam voluptas a. Rem distinctio accusamus cupiditate? Magnam alias atque est enim sint ea iure omnis, facilis perspiciatis accusamus delectus cumque tempora laboriosam, temporibus optio architecto veritatis similique aut!</p>
+
+    <!-- Lazy Loading prevents browser from downloading the image until it is near viewport, you can also set loading="eager" to make the browser download the image instantly -->
+    <img src="images/owl.jpg" alt="owl image" loading="lazy" class="third-image">
+    <p>Beautiful owl in nature</p>
+
+    <!-- NOTE: You can also set fetchpriority for large images on webpage like hero-section background-images,etc -->
+  </div>
+</body>
+</html>

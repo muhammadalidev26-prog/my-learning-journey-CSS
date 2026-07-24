@@ -1,0 +1,62 @@
+:root {
+  --fs-p: clamp(1rem, 0.38vw + 0.91rem, 1.125rem);
+  --fs-heading: clamp(1.45rem, 2.3vw + 0.89rem, 2.2rem);
+  --p-line-length: 70ch;
+  --p-line-height: 1.65;
+  --p-letter-spacing: 0.031rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Google Sans Code";
+  src: url("../fonts/Google_Sans_Flex/GoogleSansFlex_24pt-Medium.woff2");
+}
+
+body {
+  font-family: "Google Sans Code";
+  margin: 0;
+}
+
+.container {
+  max-inline-size: 100vw;
+}
+
+/* You can also apply same styles to other embed contents like videos and iframes */
+img {
+  max-inline-size: 50%;
+  block-size: auto;
+}
+
+.first-image {
+  /* image's original aspect ratio (if you change it to something else, the browser would have to squish and stretch the image) */
+  aspect-ratio: 5/3;
+}
+
+.second-image {
+  aspect-ratio: 4/3;
+}
+
+.third-image {
+  max-block-size: 90vh;
+  inline-size: auto;
+}
+
+h2,
+p {
+  margin: 0.8em;
+}
+
+h2 {
+  font-size: var(--fs-heading);
+}
+
+p {
+  font-size: var(--fs-p);
+  line-height: var(--p-line-height);
+  letter-spacing: var(--p-letter-spacing);
+}
