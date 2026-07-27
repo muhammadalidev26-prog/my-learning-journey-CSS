@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picture Element | Learning Responsive Web Design</title>
+
+  <link rel="stylesheet" href="css/picture_element.css">
+</head>
+<body>
+
+  <picture>
+  <source 
+    type="image/avif" 
+    srcset="images/owl_small.avif 400w, images/owl_large.avif 800w"
+    sizes="(max-width: 600px) 100vw, 50vw"
+  >
+
+  <source 
+    type="image/jpeg" 
+    srcset="images/owl_small.jpg 400w, images/owl_large.jpg 800w"
+    sizes="(max-width: 600px) 100vw, 50vw"
+    >
+
+  <img src="images/coding1.jpg" alt="Sample photo">
+</picture>
+
+</body>
+</html>
