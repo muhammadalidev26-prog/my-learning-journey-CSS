@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaction & Input Adaptation Demo</title>
+  <link rel="stylesheet" href="css/interaction.css">
+</head>
+<body>
+
+  <h1>Interaction & Input Adaptation</h1>
+
+  <section class="card">
+    <h2>Dynamic Controls</h2>
+    
+    <button type="button" class="action-btn">
+      <span>Save Progress</span>
+      <span class="extra" aria-hidden="true">💾</span>
+    </button>
+  </section>
+
+  <section class="card">
+    <h2>Optimized Virtual Keyboards</h2>
+    
+    <form action="#" method="post">
+      <div class="form-field">
+        <label for="full-name">Full Name</label>
+        <input 
+          type="text" 
+          id="full-name" 
+          name="name" 
+          autocomplete="name" 
+          placeholder="Jane Doe">
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          autocomplete="email" 
+          placeholder="jane@example.com">
+      </div>
+
+      <div class="form-field">
+        <label for="age">Age (Whole Number)</label>
+        <input 
+          type="number" 
+          id="age" 
+          name="age" 
+          inputmode="numeric" 
+          placeholder="25">
+      </div>
+
+      <div class="form-field">
+        <label for="price">Price (Decimal Number)</label>
+        <input 
+          type="number" 
+          id="price" 
+          name="price" 
+          inputmode="decimal" 
+          step="0.01" 
+          placeholder="19.99">
+      </div>
+
+      <button type="submit" class="action-btn">Submit Form</button>
+    </form>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* ==========================================================================
+    1. BASE STYLES
+   ========================================================================== */
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background-color: #f4f4f9;
+  color: #222;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Base button styling */
+.action-btn {
+  background-color: #005a9c;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  
+  /* Standard/default padding for mouse navigation */
+  padding: 0.5em 1em;
+  
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* ==========================================================================
+    2. POINTER MEDIA QUERIES (Sizing for Touch vs Fine Mouse)
+   ========================================================================== */
+
+/* Coarse primary pointer (e.g., finger on a touchscreen): enlarged touch target */
+@media (pointer: coarse) {
+  .action-btn {
+    padding: 1em 2em;
+  }
+}
+
+/* Any-pointer check: If ANY connected device is coarse (e.g., hybrid device with mouse + touchscreen),
+   ensure touch targets remain large enough for fingers. */
+@media (any-pointer: coarse) {
+  .action-btn {
+    padding: 1em 2em;
+  }
+}
+
+/* ==========================================================================
+    3. HOVER MEDIA QUERIES (Handling Hover & Keyboard Focus)
+   ========================================================================== */
+
+/* Default state for hover element: hidden on hover-capable primary devices */
+.action-btn .extra {
+  visibility: hidden;
+}
+
+/* If the device primary pointer supports hovering: */
+@media (hover: hover) {
+  .action-btn .extra {
+    visibility: hidden;
+  }
+
+  /* Show extra content on mouse hover OR keyboard focus */
+  .action-btn:is(:hover, :focus) .extra {
+    visibility: visible;
+  }
+}
+
+/* If NO attached input device supports hover (e.g., standard smartphone):
+   keep the extra content permanently visible so users don't miss it */
+@media (any-hover: none) {
+  .action-btn .extra {
+    visibility: visible;
+  }
+}
