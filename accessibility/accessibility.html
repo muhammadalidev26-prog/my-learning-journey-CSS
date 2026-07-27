@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility | Responsive Web Design</title>
+  <link rel="stylesheet" href="css/accessibility.css">
+</head>
+<body>
+
+  <header>
+    <h1>Accessible Design Patterns</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#about">About Accessibility</a></li>
+        <li><a href="#offers">Explore Special Offers</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Why Accessibility Matters</h2>
+      <p>
+        Building accessible sites helps everyone. Read our full summary on 
+        <a href="#offers">how to improve web usability</a>.
+      </p>
+
+      <img src="guide-cover.png" alt="A detailed accessibility checklist printed on a clipboard" width="300">
+      
+      <img src="divider-line.png" alt="" width="300">
+    </section>
+
+    <section id="contact">
+      <h2>Subscribe to Updates</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="user-email">Email Address</label>
+          <input type="email" id="user-email" name="email" required autocomplete="email">
+        </div>
+        
+        <button type="submit" class="animated-btn">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Inclusive Web Initiative. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
