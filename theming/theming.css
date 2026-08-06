@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Google Sans";
+  src: url("../fonts/Google_Sans_Flex/GoogleSansFlex_24pt-Medium.woff2");
+  font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: hsl(222, 47%, 11%);
+    --surface-color: #1e293b;
+    --inner-surface-color: #293343;
+    --fg-color: #f1f5f9;
+    --fg-muted: #94a3b8;
+    --border-color: #334155;
+    --button-bg: #38bdf8;
+    --button-color: #0f172a;
+    --primary-hover: #93c5fd;
+    --shadow-color: rgb(254 254 254 / 0.5);
+    
+    --font-family: "Google Sans", sans-serif;
+    
+    --main-heading-fs: clamp(1.5rem, 1.48vw + 1.13rem, 2.3125rem);
+    --p-fs: clamp(0.9375rem, 0.23vw + 0.88rem, 1.0625rem);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #f8fafc;
+    --surface-color: #ffffff;
+    --fg-color: #1e293b;
+    --fg-muted: #64748b;
+    --border-color: #e2e8f0;
+    --primary-hover: #2b6cb0;
+    --button-bg: #1a365d;
+    --button-color: #ffffff;
+    --shadow-color: rgb(0 0 0 / 0.5);
+
+    --font-family: "Google Sans", sans-serif;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+}
+
+.wrapper {
+  max-inline-size: 90%;
+  padding: 0 15px;
+  margin: 0 auto;
+  background-color: var(--surface-color);
+  padding: 15px 30px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px var(--shadow-color);
+}
+
+.wrapper h1 {
+  color: var(--fg-color);
+  font-size: var(--main-heading-fs);
+}
+
+.wrapper p {
+  color: var(--fg-muted);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.2rem;
+}
+
+.wrapper button {
+  padding: 10px 25px;
+  color: var(--button-color);
+  background-color: var(--button-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: background 0.3s ease
+}
+
+.wrapper button:hover {
+  background-color: var(--primary-hover);
+}
+
+.wrapper input {
+  inline-size: 300px;
+  padding: 10px 20px;
+  outline: none;
+  background-color: var(--inner-surface-color);
+  color: var(--fg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.wrapper input,
+.wrapper p,
+.wrapper button {
+  font-size: var(--p-fs);
+}
