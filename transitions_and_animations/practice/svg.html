@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG in HTML</title>
+  <style>
+    svg {
+      border: 4px dashed violet;
+    }
+
+    .rectangle {
+      fill: linear-gradient(to right, blue, red)
+    }
+
+    .gradient-fill {
+      fill: url(#myCoolGradient);
+      transition: fill 2s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <svg height="400" width="400" viewBox="150 150 200 200">
+    <circle cx="200" cy="200" r="50" fill="violet" stroke="black" stroke-width="2" />
+    <rect height="50" width="50" fill="violet" stroke="midnightblue" x="10" y="10" class="rectangle" />
+  </svg>
+
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Define the gradient and direction (Default is horizontal) -->
+      <linearGradient id="myCoolGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ff007f" />
+        <stop offset="100%" stop-color="#7f00ff" />
+      </linearGradient>
+    </defs>
+
+    <!-- Apply a class to the shape -->
+    <circle cx="50" cy="50" r="40" class="gradient-fill" />
+  </svg>
+
+  <!-- SVG by GEMINI -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+
+    <defs>
+      <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1e1e2f" />
+        <stop offset="100%" stop-color="#0f0f1a" />
+      </linearGradient>
+
+      <linearGradient id="sunGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#ff9a9e" />
+        <stop offset="100%" stop-color="#fecfef" />
+      </linearGradient>
+    </defs>
+
+    <rect width="500" height="400" rx="15" fill="url(#bgGradient)" />
+
+    <circle cx="250" cy="160" r="70" fill="url(#sunGradient)" />
+
+    <path d="M 50 300 L 450 300" stroke="#4a4e69" stroke-width="2" />
+    <path d="M 80 330 L 420 330" stroke="#4a4e69" stroke-width="1.5" />
+    <path d="M 120 360 L 380 360" stroke="#4a4e69" stroke-width="1" />
+
+    <polygon points="50,300 180,180 280,300" fill="#2d124d" opacity="0.9" />
+    <polygon points="200,300 320,150 450,300" fill="#3c1b63" opacity="0.8" />
+
+    <polygon points="120,80 125,95 140,100 125,105 120,120 115,105 100,100 115,95" fill="#fecfef" />
+    <polygon points="380,60 383,70 393,73 383,76 380,86 377,76 367,73 377,70" fill="#ff9a9e" />
+
+    <text x="250" y="385" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+      SCALABLE VECTOR GRAPHICS
+    </text>
+
+  </svg>
+
+</body>
+
+</html>
