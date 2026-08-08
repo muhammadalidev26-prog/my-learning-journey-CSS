@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations in CSS</title>
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+  <div class="box element">coding2go.com</div>
+  <div class="button-wrapper">
+    <button id="playButton" class="buttons">Play</button>
+    <button id="pauseButton" class="buttons">Pause</button>
+  </div>
+
+  <script>
+    const element = document.getElementsByClassName('element')[0];
+    const playButton = document.getElementById('playButton');
+    const pauseButton = document.getElementById('pauseButton');
+
+    playButton.addEventListener('click', () => element.style.animationPlayState = 'running');
+    pauseButton.addEventListener('click', () => element.style.animationPlayState = 'paused');
+  </script>
+</body>
+
+</html>
