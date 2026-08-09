@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-family: Verdana;
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: #FDBCB4;
+  color: white;
+}
+
+/* Centering the SVG */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: url("../images/background_image.jpg");
+  background-size: cover;
+}
+.svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 85%;
+  width: 100%;
+}
+
+/* SVG Styles */
+svg path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 525;
+  stroke-dashoffset: 525;
+  animation: textAnimation 3s ease-in-out 1 forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 525;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+
+svg {
+  animation: scale 3s ease forwards;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}

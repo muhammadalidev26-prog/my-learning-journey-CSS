@@ -1,0 +1,106 @@
+
+
+body {
+  height: 100vh;
+  width: 100vw
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
+  margin: 2rem;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 1rem;
+  margin: 1rem;
+
+  font-size: 2.5rem;
+  font-family: Verdana;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 2s ease;
+}
+
+/* Rotate */
+.rotate {
+  background-image: linear-gradient(135deg, #0f0c20, #241442, #562b75);
+  color: white;
+  font: bolder;
+}
+.rotate:hover {
+  transform: rotate(360deg);
+}
+
+
+
+/* Scale */
+.scale {
+  background: linear-gradient(45deg, #6b11ff, #bd00ff, #ff007a);
+  color: white;
+  font: bolder;
+}
+.scale:hover {
+  transform: scale(1.3);
+}
+/* Scale 2 values */
+.scale-two-values {
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+}
+.scale-two-values:hover {
+  transform: scale(
+    1.2,
+    1.5
+  ); /* first value would be applied to vertical scaling and seonc one would be applied to horizontal scaling */
+  /* You can be more specific and use scaleX() and scaleY() functions but it's fine this way too */
+}
+
+.rotate-x {
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  background-color: midnightblue;
+  color: white;
+  font-weight: bold;
+
+  transition: transform 1s ease;
+}
+
+.rotate-x:hover {
+  transform: rotatex(180deg);
+}
+
+/* Transform: translate(x,y) */
+.tranlate {
+  background-color: coral;
+}
+
+.tranlate:hover {
+  transform: translate(240px, -40px)
+}
+
+/* transform: skew */
+.skew {
+  background-color: burlywood;
+}
+.skew:hover {
+  transform: skew(30deg, 30deg);
+}
+
+/* transform: matrix([scaleX], [skewY], [skewX], [scaleY], [tranlateX], [translateY] */
+.matrix {
+  background-color: beige;
+  border: 2px solid black;
+}
+.matrix:hover {
+  transform: matrix(1.2, 1, 1, 2, 70, -100); /* we don't need to use units here */
+}
