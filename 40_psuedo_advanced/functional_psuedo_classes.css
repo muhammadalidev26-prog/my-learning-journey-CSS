@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: hsl(0 0% 5%);
+  --color-surface: hsl(0 0% 15%);
+  --color-primary: hsl(0 0% 90%);
+  --color-subdued: hsl(0 0% 70%);
+  --line-height-primary: 1.4;
+  --line-height-secondary: 1.55;
+  --padding-primary: 1rem;
+  --border-radius-primary: 1rem;
+  --font: Verdana, Geneva;
+  --margin-primary: 0.45rem;
+  --highlight: hsl(35, 80%, 60%);
+  --highlight2: hsl(191, 91%, 65%);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-subdued);
+  padding: var(--padding-primary);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1rem;
+  font-family: var(--font);
+}
+
+.container {
+  background-color: var(--color-surface);
+  padding: var(--padding-primary);
+  border-radius: var(--border-radius-primary);
+}
+.container1 :is(h2, h3, a, h4) {
+  color: var(--color-primary);
+  margin: var(--margin-primary);
+}
+.container1 p {
+  color: var(--color-subdued);
+  line-height: var(--line-height-secondary);
+}
+
+/* Each selector has it's own specificity here */
+.container1 h4, /*11 specificity */
+.container1 a { /*11 specificity */
+  color: var(--highlight);
+  white-space: nowrap;
+}
+/* but here, each selector would get the specificity of the highest specifity selector */
+.container1 :is(h4, a, .main-link) {
+  /* Each selector gets specifity of .container + .main-link = 20 */
+  color: var(--highlight2);
+}
+
+/* NOTE: If one of the selectors is wrong in a selectors list, the entire rule is ignored but with :is() only that selector is ingored and the rest of the selectors get styles applied */
+
+/* :where() */
+/* It adds zero specifity */
+.container2 h3 {
+  color: brown;
+}
+h4 {
+  color: yellow;
+}
+:where(.container2) :where(h3, #h4c2, a) {
+  /* Even though this comes later in Cascade and has an id selector, the earlier styles would be applied because where has no specificty */
+  color: orange;
+}
+
+.container:has(img) {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.container:has(img) > h2 {
+  color: blue;
+}
