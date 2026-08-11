@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psuedo Classes | Learning CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <p class="wrapper__label label">hover, focus, active</p>
+    <div class="wrapper__links">
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <div class="wrapper__buttons">
+      <button>Sign Up</button>
+      <button>Sign In</button>
+      <button>Log In</button>
+    </div>
+  </div>
+
+  <div class="cards">
+    <p class="cards__label label">first-child, last-child, nth-child, only-child, nth-last-child</p>
+    <div class="cards__card"></div>
+    <div class="cards__card"></div>
+    <div class="cards__card"></div>
+    <div class="cards__card"></div>
+    <div class="cards__card"></div>
+    <div class="cards__card"></div>
+    <div class="cards__text">
+      <p>Paragraph</p>
+    </div>
+  </div>
+  <div class="text">
+    <p class="text__p">First p</p>
+    <button class="text__button">second child</button>
+    <p class="text__p">Second p</p>
+    <p class="text__p"></p>
+    <button class="text__button">last child</button>
+  </div>
+  <div class="contact-form">
+    <form class="contact-form__form">
+      <div>
+        <label for="name" aria-label'name'></label>
+      <input type="text" class="contact-form__input" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div>
+        <label for="email" aria-label="email"></label>
+        <input type="email" class="contact-form__input" id="email" name="email" placeholder="Your email" required>
+      </div>
+      <div>
+        <label for="message" aria-label="message"></label>
+        <textarea name="message" class="contact-form__input textarea" id="message" placeholder="Message" required></textarea>
+      </div>
+      <div>
+        <button type="submit" class="contact-form__button" class="contact-form__button">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

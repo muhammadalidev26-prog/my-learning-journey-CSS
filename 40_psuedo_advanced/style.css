@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0 0% 10%);
+  min-height: 100vh;
+  width: 100%;
+  font-family: Verdana, Geneva;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.label {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-color: hsl(0 0% 20%);
+  padding: 5px 10px;
+  color: green;
+  font-family: monospace;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem;
+  max-width: 80%;
+  width: 500px;
+  background-color: hsl(0 0% 15%);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.wrapper__links,
+.wrapper__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  font: inherit;
+}
+
+.wrapper__links a,
+.wrapper__buttons button,
+.text__button {
+  font-size: 1.3rem;
+  padding: 0.7rem 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.wrapper__links a:link {
+  color: hsl(0 0% 80%);
+  text-decoration: none;
+}
+.wrapper__links a:visited {
+  color: hsl(37 81% 47%);
+}
+.wrapper__links a:hover,
+.wrapper__links a:focus {
+  color: hsl(0 0% 95%);
+}
+.wrapper__links a:active {
+  scale: 0.9;
+}
+
+.wrapper__links a::before {
+  content: "🔗";
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.wrapper__links a:hover::before {
+  opacity: 1;
+}
+
+.wrapper__buttons button,
+.text__button {
+  background-color: hsl(37 81% 47%);
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  color: hsl(0 0% 85%);
+  cursor: pointer;
+  font-family: inherit;
+}
+.wrapper__buttons button:hover,
+.wrapper__buttons button:focus {
+  color: hsl(0 0% 90%);
+  border-color: hsl(0 0% 90%);
+  scale: 1.05;
+}
+.wrapper__buttons button:active {
+  scale: 0.95;
+}
+
+/* Cards */
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 80%;
+  width: 800px;
+  background-color: hsl(0 0% 15%);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+}
+.cards__card {
+  max-width: 85%;
+  width: 150px;
+  height: 150px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cards__card:nth-child(even)::before {
+  /* you can also say .cards__cards:nth-child(2n) to select even childs) */
+  content: "EVEN";
+  margin: 5px;
+  color: blue;
+}
+.cards__card:nth-child(2n + 1)::before {
+  content: "ODD";
+  margin: 5px;
+  color: green;
+}
+.cards__card:first-child::after {
+  content: ":first-child";
+}
+.cards__card:nth-child(2)::after {
+  content: "nth-child(2)";
+}
+.cards__card:last-child::after {
+  content: ":last-child";
+}
+.cards__card:nth-last-child(2)::after {
+  content: ":nth-last-child";
+}
+/* selects if the button is the only child */
+.cards__text p:only-child {
+  color: green;
+  font-size: 1rem;
+  font-family: monospace;
+  padding: 5px 10px;
+  background-color: hsl(0 0% 20%);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+}
+
+/* Text */
+.text {
+  min-height: 250px;
+  max-width: 80%;
+  width: 500px;
+  background-color: hsl(0 0% 15%);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.text__p {
+  font-size: 1.25rem;
+  color: hsl(0 0% 85%);
+  margin: 10px;
+}
+.text__button {
+  font-size: 1.15rem;
+  padding: 7px 12px;
+}
+.text__p:first-of-type {
+  padding: 5px 10px;
+  background-color: hsl(0 0% 20%);
+  border-radius: 8px;
+}
+.text__p:first-of-type::after {
+  content: "--first of type";
+  font-size: 0.8em;
+  margin-left: 2rem;
+  color: hsl(0 0% 65%);
+}
+.text__p:last-of-type {
+  padding: 5px 10px;
+  background-color: green;
+  font-family: monospace;
+  font-size: 1.05rem;
+  border-radius: 7px;
+}
+.text__p:last-of-type::before {
+  content: "--last of type (doesn't have any content)";
+  font-size: 0.9em;
+  margin-left: 1rem;
+  color: hsl(0 0% 65%);
+}
+.text__p:empty::after {
+  content: "selected by :empty too";
+  font-size: 0.9em;
+  margin-left: 2rem;
+  color: hsl(0 0% 65%);
+}
+
+/* Contact Form */
+.contact-form {
+  padding: 1.5rem;
+  background-color: hsl(0 0% 15%);
+  max-width: 80%;
+  width: 500px;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+.contact-form__form {
+  display: grid;
+  gap: 1rem;
+}
+.contact-form__input {
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  background-color: hsl(0 0% 25%);
+  color: hsl(0 0% 85%);
+}
+.contact-form__input.textarea {
+  height: 100px;
+  overflow: auto;
+}
+.contact-form__button {
+  padding: 15px 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: hsl(37 81% 47%);
+  color: hsl(0 0% 85%);
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+.contact-form__button:hover,
+.contact-form__button:focus {
+  background-color: hsl(37 71% 54%);
+  
+}
+
+.contact-form__input:focus {
+  background-color: hsl(0 0% 35%);
+  border-color: hsl(37 81% 47%);
+}
+.contact-form:focus-within {
+  border-color: hsl(37 81% 47%);
+  box-shadow: 0px 0px 20px hsl(37 81% 47% / 0.2)
+}
+.contact-form__input[type="email"]:not(:placeholder-shown):invalid {
+  /* :not(:placeholder-show) stops it from adding border before the user has typed anything */
+  border-color: hsl(2 50% 50%);
+}
+.contact-form__input[type="email"]:not(:placeholder-shown):valid {
+  border-color: hsl(112 50% 50%);
+}
+
+/* Used to style placeholders */
+.contact-form__input::placeholder {
+  color: hsl(37 41% 54%);
+}
+/* Used to edit element in selected state */
+p::selection {
+  background-color: midnightblue;
+  color: white;
+}
