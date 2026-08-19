@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: hsl(0 0% 10%);
+}
+
+/* Creating New property */
+@property --bg-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: hsl(195 90% 60%);
+}
+
+body {
+  --bg-color: red;
+  /* Works, overrides previous color */
+  --bg-color: 50px;
+  /* Doesn't work, defaults to the properties' original value */
+}
+
+.box {
+  width: 300px;
+  aspect-ratio: 1/1;
+  max-width: 85%;
+  background-color: var(--bg-color);
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+
+.box,
+.box2 {
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@property --startColor {
+  syntax: "<color>";
+  initial-value: #EADEDB;
+  inherits: false;
+}
+
+@property --endColor {
+  syntax: "<color>";
+  initial-value: #BC70A4;
+  inherits: false;
+}
+
+.box2 {
+  position: relative;
+  height: 400px;
+  width: 90%;
+  background: linear-gradient(var(--startColor), var(--endColor));
+  animation: gradient 3s linear infinite;
+}
+
+@property --degree {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.box2::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  top: -5px;
+  left: -5px;
+  z-index: -1;
+  background: conic-gradient(from var(--degree), red, yellow, orange, skyblue, aqua, purple, cyan, red);
+  filter: blur(5px);
+  animation: border-spin 5s linear infinite;
+}
+.box2 span,
+.box2 h3 {
+  transition: all 1s ease;
+}
+
+.box2:hover {
+  span {
+    transform: translateX(-150px) translateY(70px) rotate(-45deg);
+  }
+  h3 {
+    transform: rotate(-45deg)
+  }
+}
+
+@keyframes gradient {
+
+  0%,
+  100% {
+    --startColor: #EADEDB;
+    --endColor: #BC70A4;
+  }
+
+  50% {
+    --startColor: #BC70A4;
+    --endColor: #BFD641;
+  }
+}
+
+@keyframes border-spin {
+  from {
+    --degree: 0deg;
+  }
+
+  to {
+    --degree: 360deg;
+  }
+}
